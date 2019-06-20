@@ -51,9 +51,9 @@ function scrub(e) {
 }
 
 function toggleFullscreen() {
-    console.log('Activate toggleFullscreen!');
-    console.log(isFullscreen);
-    if(isFullscreen == false) {
+    // console.log('Activate toggleFullscreen!');
+    console.log(`isFullscreen is ${isFullscreen}`);
+    if(isFullscreen == true) {
     player.requestFullscreen();
     } else {
         document.exitFullscreen();
@@ -67,7 +67,7 @@ video.addEventListener('pause', updateButton);
 video.addEventListener('timeupdate', handleProgress);
 
 // fullscreen functionality
-let isFullscreen = false;
+let isFullscreen = true;
 player.addEventListener('fullscreenchange', () => isFullscreen = !isFullscreen);
 
 toggle.addEventListener('click', togglePlay);
