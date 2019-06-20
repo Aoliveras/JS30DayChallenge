@@ -53,11 +53,7 @@ function scrub(e) {
 function toggleFullscreen() {
     // console.log('Activate toggleFullscreen!');
     console.log(`isFullscreen is ${isFullscreen}`);
-    if(isFullscreen == true) {
-    player.requestFullscreen();
-    } else {
-        document.exitFullscreen();
-    }
+    return isFullscreen ? player.requestFullscreen() : document.exitFullscreen();
 }
 
 // hookup event listeners
